@@ -1,0 +1,293 @@
+{
+  "data_size": {
+    "total": 48,
+    "real": 20,
+    "fake": 28
+  },
+  "feature_dims": {
+    "ela": 8,
+    "basic": 19,
+    "ela_basic": 27,
+    "full": 31
+  },
+  "experiments": {
+    "ela__svm": {
+      "feature": "ela",
+      "model": "svm",
+      "holdout": {
+        "accuracy": 0.6429,
+        "precision": 0.8214,
+        "recall": 0.6429,
+        "f1": 0.6337,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      },
+      "cv_f1": 0.7025,
+      "n_samples": 48,
+      "status": "ok"
+    },
+    "ela__random_forest": {
+      "feature": "ela",
+      "model": "random_forest",
+      "holdout": {
+        "accuracy": 0.7857,
+        "precision": 0.8661,
+        "recall": 0.7857,
+        "f1": 0.789,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      },
+      "cv_f1": 0.8946,
+      "n_samples": 48,
+      "status": "ok"
+    },
+    "ela__logistic_regression": {
+      "feature": "ela",
+      "model": "logistic_regression",
+      "holdout": {
+        "accuracy": 0.6429,
+        "precision": 0.8214,
+        "recall": 0.6429,
+        "f1": 0.6337,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      },
+      "cv_f1": 0.7458,
+      "n_samples": 48,
+      "status": "ok"
+    },
+    "basic__svm": {
+      "feature": "basic",
+      "model": "svm",
+      "holdout": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      },
+      "cv_f1": 1.0,
+      "n_samples": 48,
+      "status": "ok"
+    },
+    "basic__random_forest": {
+      "feature": "basic",
+      "model": "random_forest",
+      "holdout": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      },
+      "cv_f1": 1.0,
+      "n_samples": 48,
+      "status": "ok"
+    },
+    "basic__logistic_regression": {
+      "feature": "basic",
+      "model": "logistic_regression",
+      "holdout": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      },
+      "cv_f1": 1.0,
+      "n_samples": 48,
+      "status": "ok"
+    },
+    "ela_basic__svm": {
+      "feature": "ela_basic",
+      "model": "svm",
+      "holdout": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      },
+      "cv_f1": 1.0,
+      "n_samples": 48,
+      "status": "ok"
+    },
+    "ela_basic__random_forest": {
+      "feature": "ela_basic",
+      "model": "random_forest",
+      "holdout": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      },
+      "cv_f1": 1.0,
+      "n_samples": 48,
+      "status": "ok"
+    },
+    "ela_basic__logistic_regression": {
+      "feature": "ela_basic",
+      "model": "logistic_regression",
+      "holdout": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      },
+      "cv_f1": 1.0,
+      "n_samples": 48,
+      "status": "ok"
+    },
+    "full__svm": {
+      "feature": "full",
+      "model": "svm",
+      "holdout": {
+        "accuracy": 0.9286,
+        "precision": 0.9405,
+        "recall": 0.9286,
+        "f1": 0.9297,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            1,
+            8
+          ]
+        ]
+      },
+      "cv_f1": 1.0,
+      "n_samples": 48,
+      "status": "ok"
+    },
+    "full__random_forest": {
+      "feature": "full",
+      "model": "random_forest",
+      "holdout": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      },
+      "cv_f1": 1.0,
+      "n_samples": 48,
+      "status": "ok"
+    },
+    "full__logistic_regression": {
+      "feature": "full",
+      "model": "logistic_regression",
+      "holdout": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      },
+      "cv_f1": 1.0,
+      "n_samples": 48,
+      "status": "ok"
+    }
+  },
+  "best_combo": "basic__svm",
+  "best_score": 1.0
+}

@@ -1,0 +1,94 @@
+# ===== IDE =====
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.swp
+*.swo
+*~
+
+# ===== Java / Maven =====
+target/
+build/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# ===== Node / Vue =====
+node_modules/
+dist/
+dist-ssr/
+*.local
+.npm
+.cache/
+.uv-cache/
+.parcel-cache/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+.eggs/
+pip-wheel-metadata/
+.ipynb_checkpoints
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
+venv/
+env/
+ENV/
+agent-service/data/*.sqlite*
+agent-service/data/*.db
+agent-service/data/*.db-wal
+agent-service/data/*.db-shm
+*.h5
+*.joblib
+*.pkl
+*.pickle
+*.pt
+*.pth
+
+# ===== 数据集 =====
+**/data/*.csv
+**/data/*.json
+**/data/*.xlsx
+!**/data/*.md
+
+# ===== 日志 =====
+*.log
+logs/
+log/
+logback/
+*.log.*
+
+# ===== 操作系统 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 上传文件 =====
+files/
+uploads/
+
+# ===== 环境变量 =====
+.env
+.env.local
+.env.*.local
+
+# ===== AI 数据集与训练中间产物（体积大，不入库） =====
+_pre_merge_backup/
+ai-service/data/downloads/
+ai-service/data/**/raw/
+ai-service/data/**/processed/

@@ -1,0 +1,91 @@
+{
+  "case_count": 100,
+  "index_version": "1cae7be40108f26f",
+  "metrics": {
+    "bm25": {
+      "latency_p50_ms": 2.339399999982561,
+      "latency_p95_ms": 2.6620000007824274,
+      "mrr": 0.8673333333333333,
+      "recall_at_1": 0.78,
+      "recall_at_3": 0.96,
+      "recall_at_5": 1.0
+    },
+    "hybrid": {
+      "latency_p50_ms": 2.330999999685446,
+      "latency_p95_ms": 2.7353999994375044,
+      "mrr": 0.8953333333333333,
+      "recall_at_1": 0.83,
+      "recall_at_3": 0.97,
+      "recall_at_5": 1.0
+    },
+    "tfidf": {
+      "latency_p50_ms": 2.332100000785431,
+      "latency_p95_ms": 2.7181000004929956,
+      "mrr": 0.8895,
+      "recall_at_1": 0.81,
+      "recall_at_3": 0.98,
+      "recall_at_5": 1.0
+    }
+  },
+  "repeats_per_query": 3,
+  "splits": {
+    "dev": {
+      "case_count": 80,
+      "metrics": {
+        "bm25": {
+          "latency_p50_ms": 2.3110999991331482,
+          "latency_p95_ms": 2.5968999998440268,
+          "mrr": 0.94625,
+          "recall_at_1": 0.9125,
+          "recall_at_3": 0.9875,
+          "recall_at_5": 1.0
+        },
+        "hybrid": {
+          "latency_p50_ms": 2.3005000002740417,
+          "latency_p95_ms": 2.596399999674759,
+          "mrr": 0.9489583333333333,
+          "recall_at_1": 0.9125,
+          "recall_at_3": 0.9875,
+          "recall_at_5": 1.0
+        },
+        "tfidf": {
+          "latency_p50_ms": 2.2898999995959457,
+          "latency_p95_ms": 2.620899998873938,
+          "mrr": 0.9416666666666667,
+          "recall_at_1": 0.8875,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0
+        }
+      }
+    },
+    "holdout": {
+      "case_count": 20,
+      "metrics": {
+        "bm25": {
+          "latency_p50_ms": 2.439800000502146,
+          "latency_p95_ms": 2.773600001091836,
+          "mrr": 0.5516666666666666,
+          "recall_at_1": 0.25,
+          "recall_at_3": 0.85,
+          "recall_at_5": 1.0
+        },
+        "hybrid": {
+          "latency_p50_ms": 2.5003999999171356,
+          "latency_p95_ms": 2.854099999240134,
+          "mrr": 0.6808333333333333,
+          "recall_at_1": 0.5,
+          "recall_at_3": 0.9,
+          "recall_at_5": 1.0
+        },
+        "tfidf": {
+          "latency_p50_ms": 2.5050999993254663,
+          "latency_p95_ms": 2.812800001265714,
+          "mrr": 0.6808333333333333,
+          "recall_at_1": 0.5,
+          "recall_at_3": 0.9,
+          "recall_at_5": 1.0
+        }
+      }
+    }
+  }
+}

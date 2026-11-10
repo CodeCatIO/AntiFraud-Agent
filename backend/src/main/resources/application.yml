@@ -1,0 +1,70 @@
+server:
+  ip: ${SERVER_IP:localhost}
+  port: ${SERVER_PORT:9090}
+
+# Logging configuration
+logging:
+  config: classpath:logback-spring.xml
+
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher   # Fix Swagger 404 with Spring Boot 2.6+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:anti_fraud}?serverTimezone=GMT%2b8&useUnicode=true&characterEncoding=utf-8
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+  redis:
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+  servlet:
+    multipart:
+      max-file-size: ${MAX_FILE_SIZE:100MB}
+      max-request-size: ${MAX_REQUEST_SIZE:100MB}
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# Custom file and path configuration
+files:
+  upload:
+    path: ${FILE_UPLOAD_PATH:./files/}
+  python:
+    path: ${PYTHON_SCRIPT_PATH:./python/}
+    executable: ${PYTHON_EXECUTABLE:python}
+  # Backward compatibility for SystemConfigUtils
+  pythonInterpreter:
+    path: ${PYTHON_EXECUTABLE:python}
+  # Note: "Trian" is a typo in original code, kept for compatibility
+  pythonTrianCode:
+    path: ${PYTHON_TRAIN_CODE:./python/train_model_online.py}
+  pythonPredictCode:
+    path: ${PYTHON_PREDICT_CODE:./python/predict.py}
+  trainFile:
+    path: ${TRAIN_FILE_PATH:./data/train/}
+  predictFile:
+    path: ${PREDICT_FILE_PATH:./data/predict/}
+  predictModel:
+    path: ${PREDICT_MODEL_PATH:./data/model/model.h5}
+  ai-service:
+    base-url: ${AI_SERVICE_URL:http://localhost:5000}
+
+# Internal Agent service (agent-service container, never exposed to browsers)
+# 内部 Agent 服务配置，仅后端调用，不对浏览器暴露
+agent:
+  service:
+    base-url: ${AGENT_SERVICE_URL:http://localhost:8001}
+    shared-secret: ${AGENT_SERVICE_TOKEN:}
+
+# JWT authentication configuration
+# JWT 认证配置
+jwt:
+  secret: ${JWT_SECRET:anti-fraud-secret-key-2024-please-change-in-prod}
+  expire-hours: ${JWT_EXPIRE_HOURS:24}

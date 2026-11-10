@@ -1,0 +1,82 @@
+{
+  "case_count": 120,
+  "categories": {
+    "complete_context": {
+      "case_count": 76,
+      "draft_schema_validity": 1.0,
+      "field_f1": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.007500002539018169,
+      "latency_p95_ms": 0.008700000762473792,
+      "workflow_route_accuracy": 1.0
+    },
+    "missing_context": {
+      "case_count": 20,
+      "draft_schema_validity": 1.0,
+      "field_f1": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.005900001269765198,
+      "latency_p95_ms": 0.007599999662488699,
+      "workflow_route_accuracy": 1.0
+    },
+    "negated_claims": {
+      "case_count": 12,
+      "draft_schema_validity": 1.0,
+      "field_f1": 0.9600000000000001,
+      "field_precision": 0.9230769230769231,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.007499998901039362,
+      "latency_p95_ms": 0.009499999578110874,
+      "workflow_route_accuracy": 0.9166666666666666
+    },
+    "prompt_injection": {
+      "case_count": 12,
+      "draft_schema_validity": 1.0,
+      "field_f1": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.006199999916134402,
+      "latency_p95_ms": 0.007399998139590025,
+      "workflow_route_accuracy": 1.0
+    }
+  },
+  "metrics": {
+    "case_count": 120,
+    "draft_schema_validity": 1.0,
+    "field_f1": 0.9975490196078431,
+    "field_precision": 0.9951100244498777,
+    "field_recall": 1.0,
+    "latency_p50_ms": 0.007300001016119495,
+    "latency_p95_ms": 0.008700000762473792,
+    "workflow_route_accuracy": 0.9916666666666667
+  },
+  "repeats_per_case": 50,
+  "splits": {
+    "dev": {
+      "case_count": 96,
+      "draft_schema_validity": 1.0,
+      "field_f1": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.007399998139590025,
+      "latency_p95_ms": 0.008699997124494985,
+      "workflow_route_accuracy": 1.0
+    },
+    "holdout": {
+      "case_count": 24,
+      "draft_schema_validity": 1.0,
+      "field_f1": 0.9871794871794872,
+      "field_precision": 0.9746835443037974,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.006800000846851617,
+      "latency_p95_ms": 0.009100000170292333,
+      "workflow_route_accuracy": 0.9583333333333334
+    }
+  },
+  "tool_allowlist": [
+    "detect_text",
+    "search_knowledge"
+  ]
+}

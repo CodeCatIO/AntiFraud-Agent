@@ -1,0 +1,69 @@
+{
+  "total_samples": 4591,
+  "fraud_samples": 2341,
+  "normal_samples": 2250,
+  "fraud_ratio": 0.5099,
+  "avg_char_length": 45.36,
+  "max_char_length": 369,
+  "min_char_length": 8,
+  "avg_token_length": 22.17,
+  "top10_fraud_words": [
+    [
+      "的",
+      2034
+    ],
+    [
+      "您",
+      1891
+    ],
+    [
+      "你",
+      1474
+    ],
+    [
+      "我",
+      1242
+    ],
+    [
+      "账户",
+      1184
+    ],
+    [
+      "元",
+      1083
+    ],
+    [
+      "请",
+      832
+    ],
+    [
+      "是",
+      796
+    ],
+    [
+      "万元",
+      707
+    ],
+    [
+      "后",
+      681
+    ]
+  ],
+  "examples": {
+    "fraud": [
+      "Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005 Text FA to 87121 to receive entry question std txt rate T C s apply 08452810075over18 s",
+      "FreeMsg Hey there darling it s been 3 week s now and no word back I d like some fun you up for it still Tb ok XxX std chgs to send 1 50 to rcv",
+      "WINNER As a valued network customer you have been selected to receivea 900 prize reward To claim call 09061701461 Claim code KL341 Valid 12 hours only"
+    ],
+    "normal": [
+      "Go until jurong point crazy Available only in bugis n great world la e buffet Cine there got amore wat",
+      "Ok lar Joking wif u oni",
+      "U dun say so early hor U c already then say"
+    ]
+  },
+  "split": {
+    "train": 3213,
+    "val": 918,
+    "test": 460
+  }
+}

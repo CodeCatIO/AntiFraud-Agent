@@ -1,0 +1,26 @@
+{
+  "dataset_path": "data\\retrieval_eval.jsonl",
+  "dataset_review_status": "synthetic_template_generated_not_human_reviewed",
+  "dataset_sha256": "825c8d6db55a76aec024564f79ee188cc727fc76659269cf29e9eb1a9c6704cd",
+  "index_manifest": {
+    "chunk_count": 20,
+    "index_version": "1cae7be40108f26f",
+    "schema_version": 2,
+    "source_count": 20,
+    "tokenizer": "unicode-word-and-cjk-ngrams-2-3-v1"
+  },
+  "index_version": "1cae7be40108f26f",
+  "limitations": [
+    "Dataset queries are deterministic synthetic templates; gold labels are source-card ids, not human-judged semantic relevance.",
+    "TF-IDF is a sparse lexical vector baseline, not a neural embedding model.",
+    "Latency is measured locally and includes pointer lookup and retrieval; immutable snapshots are process-cached, so timing is environment-specific."
+  ],
+  "python_version": "3.12.6",
+  "repeats_per_query": 3,
+  "run_at": "2026-11-10T01:25:35.653318+00:00",
+  "strategies": [
+    "bm25",
+    "tfidf",
+    "hybrid"
+  ]
+}

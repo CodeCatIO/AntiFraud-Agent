@@ -1,0 +1,66 @@
+# ============================================================
+#  Development Environment Configuration
+#  开发环境配置 - 本地开发使用
+#
+#  通用路径说明：
+#  - 所有路径均支持通过环境变量覆盖（.env 或系统环境变量）
+#  - 默认值为相对路径，相对于后端启动时的工作目录（backend/）
+#  - 任何人 clone 后无需修改本文件即可运行
+# ============================================================
+
+server:
+  ip: ${SERVER_IP:localhost}
+  port: ${SERVER_PORT:9090}
+
+spring:
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:anti_fraud}?serverTimezone=GMT%2b8&useUnicode=true&characterEncoding=utf-8
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:SWJ811018}
+  redis:
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+  servlet:
+    multipart:
+      max-file-size: 1500MB
+      max-request-size: 1500MB
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# File paths - relative paths, overridable via environment variables
+# 相对路径默认基于项目根目录（IDEA启动），SystemConfigUtils 会自动兼容 backend/ 工作目录
+files:
+  upload:
+    path: ${FILE_UPLOAD_PATH:./files/}
+  python:
+    # AI服务脚本所在目录（项目根下的 ai-service/）
+    path: ${PYTHON_SCRIPT_PATH:./ai-service/}
+    # Python解释器：默认取 PATH 中的 python，可用 PYTHON_EXECUTABLE 指定绝对路径
+    executable: ${PYTHON_EXECUTABLE:python}
+  # Backward compatibility for SystemConfigUtils
+  # 向后兼容 SystemConfigUtils
+  pythonInterpreter:
+    path: ${PYTHON_EXECUTABLE:python}
+  # Note: "Trian" is a typo in original code, kept for compatibility
+  pythonTrianCode:
+    path: ${PYTHON_TRAIN_CODE:./ai-service/archive/train_model_online.py}
+  pythonPredictCode:
+    path: ${PYTHON_PREDICT_CODE:./ai-service/archive/predict_online.py}
+  trainFile:
+    path: ${TRAIN_FILE_PATH:./data/train/}
+  predictFile:
+    path: ${PREDICT_FILE_PATH:./data/predictfile/}
+  predictModel:
+    path: ${PREDICT_MODEL_PATH:./ai-service/models/fusion_model.joblib}
+  ai-service:
+    base-url: ${AI_SERVICE_URL:http://localhost:5000}
+    connect-timeout: 5000
+    read-timeout: 30000
+
+# JWT authentication configuration (dev defaults, override in .env)
+# JWT认证配置（开发默认值，可在 .env 中覆盖）
+jwt:
+  secret: ${JWT_SECRET:anti-fraud-dev-secret-key}
+  expire-hours: ${JWT_EXPIRE_HOURS:24}

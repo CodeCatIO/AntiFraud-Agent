@@ -1,0 +1,18 @@
+{
+  "total_samples": 1866,
+  "augmented_samples": 9330,
+  "total_with_augmentation": 11196,
+  "fraud_samples": 933,
+  "normal_samples": 933,
+  "total_duration_sec": 7828.5,
+  "total_duration_hours": 2.1746,
+  "target_sample_rate": 16000,
+  "mfcc_dimensions": 20,
+  "augmentation_types": [
+    "noise",
+    "speed_up",
+    "speed_down",
+    "pitch_up",
+    "pitch_down"
+  ]
+}

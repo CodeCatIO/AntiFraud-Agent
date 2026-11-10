@@ -1,0 +1,36 @@
+{
+  "best_combo": "word_char_combined__linear_svc",
+  "selection_score_cv_f1": 0.9991,
+  "training_seconds": 255.1,
+  "accuracy": 1.0,
+  "per_class": {
+    "0_正常": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 758
+    },
+    "1_诈骗": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 399
+    }
+  },
+  "confusion_matrix": [
+    [
+      758,
+      0
+    ],
+    [
+      0,
+      399
+    ]
+  ],
+  "hyperparams": {
+    "features": "word(1-gram TF-IDF,5000) + char_wb(2-4gram TF-IDF,5000)",
+    "classifier": "linear_svc",
+    "cv_folds": 5,
+    "random_state": 42
+  }
+}

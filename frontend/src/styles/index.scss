@@ -1,0 +1,174 @@
+@use './variables.scss' as *;
+
+// 全局 reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  color: #183247;
+  background: #f4f7f8;
+}
+
+html:root {
+  --surface-glass: rgba(255, 255, 255, .72);
+  --surface-glass-border: rgba(255, 255, 255, .86);
+  --surface-glass-shadow: 0 16px 38px rgba(37, 91, 110, .085), inset 0 1px rgba(255, 255, 255, .88);
+  --el-color-primary: #167b81;
+  --el-color-primary-light-3: #52a2a6;
+  --el-color-primary-light-5: #80b9bb;
+  --el-color-primary-light-7: #b1d6d6;
+  --el-color-primary-light-9: #edf7f6;
+  --el-color-primary-dark-2: #0e6268;
+  --el-border-radius-base: 8px;
+  --el-text-color-primary: #183247;
+}
+
+::selection { background: #b9dedc; color: #15364a; }
+:focus-visible { outline: 2px solid #167b81; outline-offset: 3px; }
+.el-button { font-weight: 600; }
+.manage-main .el-card,
+.login-form-area .el-card,
+.register-page .el-card {
+  border-radius: 18px;
+  border-color: var(--surface-glass-border);
+  background: var(--surface-glass);
+  box-shadow: var(--surface-glass-shadow);
+  backdrop-filter: blur(16px) saturate(1.18);
+  -webkit-backdrop-filter: blur(16px) saturate(1.18);
+}
+.manage-main .el-card__header,
+.login-form-area .el-card__header,
+.register-page .el-card__header {
+  border-bottom-color: rgba(116, 160, 171, .17);
+  color: #19344a;
+  font-weight: 600;
+}
+
+.manage-main .el-button--primary:not(.is-link, .is-disabled) {
+  border-color: #13747d;
+  border-radius: 9px;
+  background: linear-gradient(120deg, #1a9297, #116c7b);
+  box-shadow: 0 7px 17px rgba(18, 107, 119, .15), inset 0 1px rgba(255, 255, 255, .2);
+}
+.manage-main .el-button--primary:not(.is-link, .is-disabled):hover {
+  background: linear-gradient(120deg, #22a0a4, #167b87);
+}
+.manage-main .el-input__wrapper,
+.manage-main .el-textarea__inner {
+  border-radius: 9px;
+  background: rgba(255, 255, 255, .75);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .9), 0 0 0 1px rgba(99, 145, 157, .25);
+}
+.manage-main .el-input__wrapper.is-focus,
+.manage-main .el-textarea__inner:focus {
+  box-shadow: inset 0 1px rgba(255, 255, 255, .9), 0 0 0 2px #167b81;
+}
+.manage-main .el-input.is-disabled .el-input__wrapper { background: rgba(227, 236, 239, .65); }
+
+.manage-main .el-upload-dragger {
+  border: 1px dashed rgba(37, 139, 147, .47);
+  border-radius: 14px;
+  background: linear-gradient(140deg, rgba(255, 255, 255, .73), rgba(222, 244, 244, .58));
+  box-shadow: inset 0 1px rgba(255, 255, 255, .9);
+  transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+.manage-main .el-upload-dragger:hover,
+.manage-main .el-upload-dragger:focus-visible {
+  border-color: #167b81;
+  background: rgba(232, 249, 248, .88);
+  box-shadow: 0 8px 24px rgba(35, 111, 122, .09), inset 0 1px rgba(255, 255, 255, .9);
+}
+.manage-main .el-empty__image { opacity: .66; filter: saturate(.55) hue-rotate(120deg); }
+.manage-main .el-empty__description p { color: #597383; }
+
+.manage-main .el-table {
+  --el-table-border-color: rgba(116, 160, 171, .17);
+  --el-table-header-bg-color: rgba(221, 242, 242, .57);
+  --el-table-tr-bg-color: transparent;
+  --el-table-row-hover-bg-color: rgba(218, 242, 241, .74);
+  background: transparent;
+  color: #29495a;
+}
+.manage-main .el-table th.el-table__cell {
+  background: rgba(222, 242, 242, .6);
+  color: #355766;
+  font-weight: 600;
+}
+.manage-main .el-table td.el-table__cell { background: rgba(255, 255, 255, .3); }
+.manage-main .el-table .el-table__row--striped td.el-table__cell { background: rgba(231, 246, 246, .48); }
+.manage-main .el-table .el-table__row:hover td.el-table__cell { background: rgba(218, 242, 241, .74); }
+.manage-main .el-table th.el-table__cell.el-table-fixed-column--right { background: #e7f4f4; }
+.manage-main .el-table td.el-table__cell.el-table-fixed-column--right { background: #f7fcfc; }
+.manage-main .el-table .el-table__row--striped td.el-table__cell.el-table-fixed-column--right { background: #eff8f8; }
+.manage-main .el-table .el-table__row:hover td.el-table__cell.el-table-fixed-column--right { background: #e3f3f2; }
+.manage-main .el-table__inner-wrapper::before { background: rgba(116, 160, 171, .17); }
+.manage-main .el-pagination { --el-pagination-button-bg-color: rgba(255, 255, 255, .55); }
+.manage-main .el-tabs__nav-wrap::after { background: rgba(116, 160, 171, .2); }
+.manage-main .el-tabs__active-bar { background: #167b81; }
+
+body .el-dialog,
+body .el-message-box {
+  border: 1px solid rgba(255, 255, 255, .88);
+  border-radius: 18px;
+  background: rgba(250, 254, 254, .94);
+  box-shadow: 0 24px 72px rgba(22, 63, 80, .2), inset 0 1px rgba(255, 255, 255, .95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+body .el-dialog__header { border-bottom: 1px solid rgba(116, 160, 171, .17); padding-bottom: 16px; }
+body .el-dialog__title { color: #19344a; font-weight: 600; }
+body .el-dialog__body { color: #29495a; }
+
+@supports not (backdrop-filter: blur(1px)) {
+  .manage-main .el-card, .login-form-area .el-card, .register-page .el-card, body .el-dialog, body .el-message-box { background: #fff; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .manage-main .el-card, .login-form-area .el-card, .register-page .el-card, body .el-dialog, body .el-message-box { background: #fff; backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+// 风险标签公共样式
+.risk-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 20px;
+
+  &--high {
+    color: $color-high;
+    background-color: rgba($color-high, 0.1);
+    border: 1px solid rgba($color-high, 0.4);
+  }
+
+  &--mid {
+    color: $color-mid;
+    background-color: rgba($color-mid, 0.1);
+    border: 1px solid rgba($color-mid, 0.4);
+  }
+
+  &--low {
+    color: $color-low;
+    background-color: rgba($color-low, 0.1);
+    border: 1px solid rgba($color-low, 0.4);
+  }
+
+  &--safe {
+    color: $color-safe;
+    background-color: rgba($color-safe, 0.1);
+    border: 1px solid rgba($color-safe, 0.4);
+  }
+}

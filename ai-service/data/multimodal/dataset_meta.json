@@ -1,0 +1,11 @@
+{
+  "total_cases": 120,
+  "per_class": 60,
+  "ambiguous_probability_per_modality": 0.25,
+  "ambiguous_counts": {
+    "ambiguous_t": 32,
+    "ambiguous_v": 25,
+    "ambiguous_i": 26,
+    "all_ambiguous": 2
+  }
+}

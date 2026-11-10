@@ -1,0 +1,4 @@
+True Negatives (TN): 55478 → 实际正常，预测正常
+False Positives (FP): 1386 → 实际正常，预测欺诈
+False Negatives (FN): 8 → 实际欺诈，预测正常
+True Positives (TP): 90 → 实际欺诈，预测欺诈

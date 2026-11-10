@@ -1,0 +1,49 @@
+# ============================================================
+#  Production Environment Configuration
+#  生产环境配置 - 部署服务器使用
+#  所有敏感信息通过环境变量注入，不要硬编码！
+# ============================================================
+
+server:
+  ip: ${SERVER_IP:0.0.0.0}
+  port: ${SERVER_PORT:9090}
+
+spring:
+  datasource:
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT:3306}/${DB_NAME}?serverTimezone=GMT%2b8&useUnicode=true&characterEncoding=utf-8
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  redis:
+    host: ${REDIS_HOST}
+    port: ${REDIS_PORT:6379}
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+
+# File paths - production uses relative paths inside container
+files:
+  upload:
+    path: ${FILE_UPLOAD_PATH:/app/files/}
+  python:
+    path: ${PYTHON_SCRIPT_PATH:/app/python/}
+    executable: ${PYTHON_EXECUTABLE:python3}
+  trainFile:
+    path: ${TRAIN_FILE_PATH:/app/data/train/}
+  predictFile:
+    path: ${PREDICT_FILE_PATH:/app/data/predict/}
+  predictModel:
+    path: ${PREDICT_MODEL_PATH:/app/data/model/model.h5}
+  ai-service:
+    base-url: ${AI_SERVICE_URL:http://ai-service:5000}
+
+# Internal Agent service - only reachable on the compose network
+# 内部 Agent 服务，仅在 Docker 内网可达，不映射宿主端口
+agent:
+  service:
+    base-url: ${AGENT_SERVICE_URL:http://agent-service:8001}
+    shared-secret: ${AGENT_SERVICE_TOKEN}

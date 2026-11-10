@@ -1,0 +1,62 @@
+{
+  "dataset": "CIFAKE",
+  "source": "dragonintelligence/CIFAKE-image-dataset @ hf-mirror",
+  "feature_kind": "full",
+  "n_train": 8000,
+  "n_test": 2000,
+  "label_mapping": "CIFAKE 0=FAKE->1(伪), 1=REAL->0(真)",
+  "models": {
+    "logistic_regression": {
+      "accuracy": 0.8655,
+      "precision": 0.8657,
+      "recall": 0.8655,
+      "f1": 0.8655,
+      "recall_fake": 0.853,
+      "confusion_matrix": [
+        [
+          878,
+          122
+        ],
+        [
+          147,
+          853
+        ]
+      ]
+    },
+    "random_forest": {
+      "accuracy": 0.877,
+      "precision": 0.877,
+      "recall": 0.877,
+      "f1": 0.877,
+      "recall_fake": 0.873,
+      "confusion_matrix": [
+        [
+          881,
+          119
+        ],
+        [
+          127,
+          873
+        ]
+      ]
+    },
+    "svm": {
+      "accuracy": 0.913,
+      "precision": 0.913,
+      "recall": 0.913,
+      "f1": 0.913,
+      "recall_fake": 0.908,
+      "confusion_matrix": [
+        [
+          918,
+          82
+        ],
+        [
+          92,
+          908
+        ]
+      ]
+    }
+  },
+  "best_model": "svm"
+}

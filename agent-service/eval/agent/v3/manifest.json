@@ -1,0 +1,22 @@
+{
+  "dataset_path": "data\\agent_eval_v3.jsonl",
+  "dataset_review_status": "synthetic_templates_generated_and_script_validated; external_human_review_pending",
+  "dataset_sha256": "ce92b8174f806c9fd824ce71f6c920712c0bb2ff6405958a5fe014f771891d30",
+  "dataset_version": "v3",
+  "external_detector_baseline": "not_run",
+  "limitations": [
+    "Cases are synthetic and partly templated; this is an offline engineering regression, not fraud-detection accuracy.",
+    "Gold labels are generated from explicit template construction and require independent student/advisor review before thesis claims.",
+    "Draft schema checks use fixed tool-result fixtures; no network, Flask detector, or external LLM call is made.",
+    "Latency covers local rule routing and fixed draft construction only, not MCP, model, database, or end-to-end latency."
+  ],
+  "python_version": "3.12.6",
+  "repeats_per_case": 50,
+  "run_at": "2026-10-26T06:19:07.959907+00:00",
+  "single_turn_llm_baseline": "not_run",
+  "tool_allowlist": [
+    "detect_text",
+    "search_knowledge"
+  ],
+  "workflow": "deterministic missing-information rules plus fixed draft fixture"
+}

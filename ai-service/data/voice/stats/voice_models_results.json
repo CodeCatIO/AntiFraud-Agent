@@ -1,0 +1,64 @@
+{
+  "dataset": "Deepfake Audio Detection v4",
+  "source": "garystafford/deepfake-audio-detection @ hf-mirror",
+  "license": "CC-BY-4.0",
+  "feature_kind": "delta",
+  "n_mfcc": 20,
+  "n_total": 1866,
+  "n_train": 1492,
+  "n_test": 374,
+  "models": {
+    "gmm": {
+      "accuracy": 0.9652,
+      "precision": 0.9654,
+      "recall": 0.9652,
+      "f1": 0.9652,
+      "recall_fake": 0.9733,
+      "confusion_matrix": [
+        [
+          179,
+          8
+        ],
+        [
+          5,
+          182
+        ]
+      ]
+    },
+    "svm": {
+      "accuracy": 0.9652,
+      "precision": 0.9654,
+      "recall": 0.9652,
+      "f1": 0.9652,
+      "recall_fake": 0.9572,
+      "confusion_matrix": [
+        [
+          182,
+          5
+        ],
+        [
+          8,
+          179
+        ]
+      ]
+    },
+    "rf": {
+      "accuracy": 0.9358,
+      "precision": 0.9363,
+      "recall": 0.9358,
+      "f1": 0.9358,
+      "recall_fake": 0.9519,
+      "confusion_matrix": [
+        [
+          172,
+          15
+        ],
+        [
+          9,
+          178
+        ]
+      ]
+    }
+  },
+  "best_model": "gmm"
+}

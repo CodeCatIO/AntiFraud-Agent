@@ -1,0 +1,82 @@
+{
+  "case_count": 120,
+  "categories": {
+    "complete_context": {
+      "case_count": 76,
+      "draft_schema_validity": 1.0,
+      "field_f1": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.007200000254670158,
+      "latency_p95_ms": 0.007800001185387373,
+      "workflow_route_accuracy": 1.0
+    },
+    "missing_context": {
+      "case_count": 20,
+      "draft_schema_validity": 1.0,
+      "field_f1": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.006099999154685065,
+      "latency_p95_ms": 0.006900001608300954,
+      "workflow_route_accuracy": 1.0
+    },
+    "negated_claims": {
+      "case_count": 12,
+      "draft_schema_validity": 1.0,
+      "field_f1": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.009899998985929415,
+      "latency_p95_ms": 0.01170000177808106,
+      "workflow_route_accuracy": 1.0
+    },
+    "prompt_injection": {
+      "case_count": 12,
+      "draft_schema_validity": 1.0,
+      "field_f1": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.006399997801054269,
+      "latency_p95_ms": 0.006800000846851617,
+      "workflow_route_accuracy": 1.0
+    }
+  },
+  "metrics": {
+    "case_count": 120,
+    "draft_schema_validity": 1.0,
+    "field_f1": 1.0,
+    "field_precision": 1.0,
+    "field_recall": 1.0,
+    "latency_p50_ms": 0.007099999493220821,
+    "latency_p95_ms": 0.010000003385357559,
+    "workflow_route_accuracy": 1.0
+  },
+  "repeats_per_case": 50,
+  "splits": {
+    "dev": {
+      "case_count": 96,
+      "draft_schema_validity": 1.0,
+      "field_f1": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.007100003131199628,
+      "latency_p95_ms": 0.009899998985929415,
+      "workflow_route_accuracy": 1.0
+    },
+    "holdout": {
+      "case_count": 24,
+      "draft_schema_validity": 1.0,
+      "field_f1": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "latency_p50_ms": 0.006300000677583739,
+      "latency_p95_ms": 0.010399999155197293,
+      "workflow_route_accuracy": 1.0
+    }
+  },
+  "tool_allowlist": [
+    "detect_text",
+    "search_knowledge"
+  ]
+}

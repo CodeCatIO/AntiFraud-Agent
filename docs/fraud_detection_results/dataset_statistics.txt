@@ -1,0 +1,7 @@
+Total transactions: 284,807
+Fraudulent transactions: 492 (0.173%)
+Normal transactions: 284,315 (99.827%)
+
+Transaction Amount Comparison:
+Average Amount - Normal: $88.29 | Fraud: $122.21
+Median Amount - Normal: $22.00 | Fraud: $9.25
